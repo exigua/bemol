@@ -1,0 +1,46 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+
+<h1>Ajouter un(e) Gardien(ne)</h1>
+<form id="newContact">
+  <div>
+    <label for="firstName">Prénom</label>
+    <input type="text" id="firstName" placeholder="Prénom">
+  </div>
+  <div>
+    <label for="surname">Nom</label>
+    <input type="text" id="surname" placeholder="Nom">
+  </div>
+  
+  <div>
+    <label for="mobile">N° Mobile</label>
+    <input type="text" id="mobile" placeholder="+33">
+  </div>
+  
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="@">
+  </div>
+  
+  <button type="submit">Ajouter</button>
+</form><br><br><br>
+
+{# {% if user %}
+  {% for contact in contacts %}
+<div class="card border-primary mb-3" style="max-width: 18rem;">
+  <div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{contact.firstname}} {{contact.surname}}</li>
+    <li class="list-group-item">{{contact.mobile}}</li>
+    <li class="list-group-item">{{contact.email}}</li>
+  </ul>
+</div>
+{% if user._id ==contact.user.id %}
+  <a href="/tweet/{{contact._id}}" style="text-align:left" class="card-text"><small class="text-muted" class="card-footer">Edit</small></a>
+
+{% endif %}
+  {% endfor %} #}
+{% endblock %}
+
